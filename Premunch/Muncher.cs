@@ -40,12 +40,17 @@ namespace Premunch
             if (!_unitTester.Result())
             {
                 _unitTester.ReportResult();
+                Console.WriteLine("Red");
                 return "Red";
             }
 
-            if(!_sitChecker.Result())
+            if (!_sitChecker.Result())
+            {
+                Console.WriteLine("Red");
                 return "Red";
+            }
 
+            Console.WriteLine("Green");
             return "Green";
         }
     }
